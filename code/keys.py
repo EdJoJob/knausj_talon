@@ -118,6 +118,8 @@ ctx.lists["self.letter"] = alphabet
 ctx.lists["self.symbol_key"] = {
     "back tick": "`",
     "`": "`",
+    "tilde": "~",
+    "~": "~",
     "comma": ",",
     ",": ",",
     "dot": ".",
