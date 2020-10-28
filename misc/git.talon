@@ -65,6 +65,12 @@ git status: "git status\n"
 git submodule add:  "git submodule add "
 git tag: "git tag "
 
+
+## Git Aliases
+git up: "git up\n"
+git whip: "git wip\n"
+git unwhip: "git unwip\n"
+
 # Convenience
 git edit config: "git config --local -e\n"
 
