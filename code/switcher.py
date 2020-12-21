@@ -179,6 +179,9 @@ def update_lists():
         if name.endswith(".exe"):
             name = name.rsplit(".", 1)[0]
 
+        if len(name) < 3:
+            continue
+
         words = get_words(name)
         for word in words:
             if word and word not in running and len(word) >= 3:
