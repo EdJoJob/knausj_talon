@@ -114,7 +114,11 @@ ctx = Context()
 modifier_keys = {
     # If you find 'alt' is often misrecognized, try using 'alter'.
     "alt": "alt",  #'alter': 'alt',
-    "control": "ctrl",  #'troll':   'ctrl',
+    #  "command": "cmd",
+    "mac": "cmd",
+    #  "control": "ctrl",
+    'troll':  'ctrl',
+    "option": "alt",
     "shift": "shift",  #'sky':     'shift',
     "super": "super",
 }
