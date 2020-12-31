@@ -34,7 +34,7 @@ grab left: key(shift-up)
 grab right: key(shift-down)
 add line: key(shift-enter)
 (slack | lack) (slap | slaw | slapper): key(cmd-right shift-enter)
-(slack | lack) (react | reaction): key(cmd-shift-\\)
+(slack | lack) (react | reaction): key(cmd-shift-\)
 (insert command | commandify): key(cmd-shift-c)
 insert code:
     insert("``````")
