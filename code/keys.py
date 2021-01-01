@@ -230,7 +230,10 @@ simple_keys = [
 alternate_keys = {
     "delete": "backspace",
     "forward delete": "delete",
-    'junk': 'backspace',
+    "pat": "space",
+    "junk": "backspace",
+    "semi": ";",
+    "slap": "enter",
     "page up": "pageup",
     "page down": "pagedown",
 }
