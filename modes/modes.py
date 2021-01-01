@@ -1,6 +1,7 @@
 from talon import Context, Module, app, actions, speech_system
 
 mod = Module()
+ctx = Context()
 
 modes = {
     "admin": "enable extra administration commands terminal (docker, etc)",
@@ -45,3 +46,7 @@ class Actions:
                 actions.user.engine_wake()
                 # note: this may not do anything for all versions of Dragon. Requires Pro.
                 actions.user.engine_mimic("start normal mode")
+
+    def notify(mode: str):
+        """Proxy app notifications for mode type notification"""
+        app.notify("Mode", mode)
