@@ -29,6 +29,8 @@ settings():
     user.command_history_size = 50
 
 	speech.record_all = 1
-	
+    # default is 0.150
+    speech.timeout = 0.200
+
 # uncomment tag to enable mouse grid
 # tag(): user.mouse_grid_enabled
