@@ -55,3 +55,9 @@ action(browser.show_history):
 	
 action(browser.toggle_dev_tools):
 	key(cmd-alt-i)
+
+
+accept warning:
+    key(tab space)
+    sleep(50ms)
+    key(tab tab tab space)
