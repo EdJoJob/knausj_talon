@@ -382,5 +382,4 @@ def on_ready():
     ui.register("", ui_event)
 
 
-# NOTE: please update this from "launch" to "ready" in Talon v0.1.5
-app.register("launch", on_ready)
+app.register("ready", on_ready)
