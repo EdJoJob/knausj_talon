@@ -9,6 +9,23 @@ directories_to_remap = {}
 directories_to_exclude = {}
 
 
+@ctx.action_class("win")
+class win_actions:
+    def filename():
+        title = actions.win.title()
+        result = ""
+        if "VIM" in title:
+            result = title.split()[-1]
+
+        if "." in result:
+            return result
+
+        return ""
+
+    def file_ext():
+        return actions.win.filename().split(".")[-1]
+
+
 @ctx.action_class("user")
 class user_actions:
     # def file_manager_current_path():
