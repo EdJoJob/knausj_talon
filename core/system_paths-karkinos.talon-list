@@ -1,0 +1,16 @@
+list: user.system_paths
+hostname: karkinos
+-
+user: /Users/edward.evans
+desktop: /Users/edward.evans/Desktop
+desk: /Users/edward.evans/Desktop
+documents: /Users/edward.evans/Documents
+docks: /Users/edward.evans/Documents
+downloads: /Users/edward.evans/Downloads
+music: /Users/edward.evans/Music
+pictures: /Users/edward.evans/Pictures
+videos: /Users/edward.evans/Videos
+talon home: /Users/edward.evans/.talon
+talon recordings: /Users/edward.evans/.talon/recordings
+talon user: /Users/edward.evans/.talon/user
+home: /Users/edward.evans
