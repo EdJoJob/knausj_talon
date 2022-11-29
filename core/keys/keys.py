@@ -123,9 +123,15 @@ def letters(m) -> str:
 ctx = Context()
 modifier_keys = {
     # If you find 'alt' is often misrecognized, try using 'alter'.
-    "alt": "alt",  #'alter': 'alt',
-    "control": "ctrl",  #'troll':   'ctrl',
-    "shift": "shift",  #'sky':     'shift',
+    "alt": "alt",  # 'alter': 'alt',
+    #  "command": "cmd",
+    #  "mac": "cmd",
+    #  "control": "ctrl",
+    "troll": "ctrl",
+    "king": "ctrl",
+    "option": "alt",
+    "shift": "shift",  # 'sky':     'shift',
+    "ship": "shift",
     "super": "super",
 }
 if app.platform == "mac":
@@ -137,18 +143,13 @@ ctx.lists["self.letter"] = alphabet_list
 # `punctuation_words` is for words you want available BOTH in dictation and as key names in command mode.
 # `symbol_key_words` is for key names that should be available in command mode, but NOT during dictation.
 punctuation_words = {
-    # TODO: I'm not sure why we need these, I think it has something to do with
-    # Dragon. Possibly it has been fixed by later improvements to talon? -rntz
-    "`": "`",
-    ",": ",",  # <== these things
-    "back tick": "`",
+    "tilde": "~",
     "comma": ",",
     # Workaround for issue with conformer b-series; see #946
     "coma": ",",
     "period": ".",
     "full stop": ".",
     "semicolon": ";",
-    "colon": ":",
     "forward slash": "/",
     "question mark": "?",
     "exclamation mark": "!",
@@ -163,6 +164,7 @@ punctuation_words = {
     # Currencies
     "dollar sign": "$",
     "pound sign": "£",
+    "euro": "€",
     "hyphen": "-",
     "L paren": "(",
     "left paren": "(",
@@ -173,16 +175,20 @@ symbol_key_words = {
     "dot": ".",
     "point": ".",
     "quote": "'",
+    "swirl": "@",
     "question": "?",
     "apostrophe": "'",
-    "L square": "[",
-    "left square": "[",
     "square": "[",
-    "R square": "]",
+    "open square": "[",
+    "close square": "]",
     "right square": "]",
     "slash": "/",
+    "stroke": "/",
     "backslash": "\\",
     "minus": "-",
+    "stack": ":",
+    "drip": ",",
+    "semi": ";",
     "dash": "-",
     "equals": "=",
     "plus": "+",
@@ -191,22 +197,19 @@ symbol_key_words = {
     "bang": "!",
     "down score": "_",
     "underscore": "_",
+    "under": "_",
     "paren": "(",
-    "brace": "{",
-    "left brace": "{",
-    "brack": "{",
-    "bracket": "{",
-    "left bracket": "{",
-    "r brace": "}",
-    "right brace": "}",
-    "r brack": "}",
-    "r bracket": "}",
-    "right bracket": "}",
+    "open paren": "(",
+    "close paren": ")",
+    "right paren": ")",
+    "open curly": "{",
+    "close curly": "}",
+    "right curly": "}",
     "angle": "<",
-    "left angle": "<",
+    "open angle": "<",
     "less than": "<",
     "rangle": ">",
-    "R angle": ">",
+    "close angle": ">",
     "right angle": ">",
     "greater than": ">",
     "star": "*",
@@ -217,9 +220,12 @@ symbol_key_words = {
     "pipe": "|",
     "dub quote": '"',
     "double quote": '"',
+    "question": "?",
+    "section mark": "§",
     # Currencies
     "dollar": "$",
     "pound": "£",
+    "euro": "€",
 }
 
 # make punctuation words also included in {user.symbol_keys}
@@ -235,11 +241,11 @@ ctx.lists["self.arrow_key"] = {
 }
 
 simple_keys = [
-    "end",
-    "enter",
+    #  "end",
+    #  "enter",
     "escape",
-    "home",
-    "insert",
+    #  "home",
+    #  "insert",
     "pagedown",
     "pageup",
     "space",
@@ -248,9 +254,15 @@ simple_keys = [
 
 alternate_keys = {
     "wipe": "backspace",
+    "whack": "\\",
+    "wave": "~",
     "delete": "backspace",
-    #'junk': 'backspace',
+    "drill": "delete",
     "forward delete": "delete",
+    "void": "space",
+    "junk": "backspace",
+    "turn": "enter",
+    "slap": "enter",
     "page up": "pageup",
     "page down": "pagedown",
 }
