@@ -70,3 +70,10 @@ worktree prune
 worktree remove
 worktree repair
 worktree unlock
+up
+whip: wip
+unwhip: unwip
+batlog: blog
+absorb
+graphlog: glog
+smart log: sl
