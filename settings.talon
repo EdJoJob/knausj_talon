@@ -40,10 +40,10 @@ settings():
     user.mouse_wheel_horizontal_amount = 40
 
     # Mouse grid and friends put the number one on the bottom left (vs on the top left)
-    user.grids_put_one_bottom_left = 1
+    user.grids_put_one_bottom_left = 0
 
     # The number of lines of command history to display by default
-    user.command_history_display = 10
+    user.command_history_display = 2
 
     # The number of lines of command history to keep in total;
     # "command history more" to display all of them, "command history less" to restore
@@ -65,6 +65,13 @@ settings():
     # 'size aware' keeps absolute window size the same, except full-height or
     # -width windows are resized to stay full-height/width.
     #user.window_snap_screen = "size aware"
+
+    speech.record_all = 1
+
+    # default is 0.300
+    speech.timeout = 0.45
+
+    imgui.dark_mode = 1
 
 # Uncomment this to enable the curse yes/curse no commands (show hide mouse cursor). See issue #688.
 # tag(): user.mouse_cursor_commands_enable
