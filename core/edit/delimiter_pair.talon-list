@@ -10,12 +10,20 @@ list: user.delimiter_pair
 # pad: space space
 
 round: ( )
-box: [ ]
-diamond: < >
+arg: ( )
+square: [ ]
+bracket: [ ]
+square bracket: [ ]
+list: [ ]
+angle: < >
 curly: { }
 twin: "' '"
+quotes: "' '"
 quad: '" "'
-skis: ` `
+dub quote: '" "'
+double quote: '" "'
+grave: ` `
+backtick: ` `
 percentages: % %
 pad: space space
 

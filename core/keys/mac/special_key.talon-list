@@ -2,17 +2,19 @@ list: user.special_key
 os: mac
 -
 
-end: end
-home: home
 minus: minus
 return: return
 enter: keypad_enter
+turn: enter
+slap: enter
 page down: pagedown
 page up: pageup
 escape: escape
 space: space
+void: space
 tab: tab
-insert: insert
+junk: backspace
 wipe: backspace
 delete: backspace
 forward delete: delete
+drill: delete
