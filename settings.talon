@@ -62,20 +62,16 @@ settings():
     user.mouse_wheel_horizontal_amount = 40
 
     # If `true`, start mouse grid numbering on the bottom left (vs. top left)
-    user.grids_put_one_bottom_left = true
+    user.grids_put_one_bottom_left = false
 
     # If `true`, show a zoomed in version of the mouse grid when it becomes sufficiently small
     user.grid_show_zoomed = true
 
     # Set the default number of command history lines to display
-    user.command_history_display = 10
+    user.command_history_display = 2
 
     # Set the total number of command history lines to display
     user.command_history_size = 50
-
-    # Set the time window size for to for pop_twice_to_sleep and pop_twice_to_repeat. By default, the pops must be more than 0.1 seconds apart and less then 0.3 seconds, to reduce false positives
-    user.double_pop_speed_minimum = 0.1
-    user.double_pop_speed_maximum = 0.3
 
     # Uncomment to add a directory (relative to the Talon user dir) with additional
     # .snippet files. Changing this setting requires a restart of Talon.
@@ -105,6 +101,12 @@ settings():
 
     # Puts Talon into sleep mode if no commands are spoken for a defined period of time.
     # user.listening_timeout_minutes = 3
+    speech.record_all = 1
+
+    # default is 0.300
+    speech.timeout = 0.45
+
+    imgui.dark_mode = 1
 
     # Time in seconds to wait for the clipboard to change when trying to get selected text
     # user.selected_text_timeout = 0.25

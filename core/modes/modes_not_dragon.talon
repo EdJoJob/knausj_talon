@@ -33,3 +33,12 @@ not speech.engine: dragon
     user.help_hide()
     user.mouse_sleep()
     speech.disable()
+
+^drowse [<phrase>]$:
+    user.code_clear_language_mode()
+    speech.disable()
+
+^let the meeting begin [<phrase>]$:
+    user.code_clear_language_mode()
+    mode.disable("noise")
+    speech.disable()
