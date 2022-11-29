@@ -126,6 +126,7 @@ abbreviations = {
     "document": "doc",
     "documents": "docs",
     "doing": "ing",  # some way to add 'ing' to verbs
+    "done for the day": "dftd",
     "double ended queue": "deque",
     "double": "dbl",
     "dupe": "dup",
@@ -254,6 +255,7 @@ abbreviations = {
     "mutate": "mut",
     "nano second": "ns",
     "neo vim": "nvim",
+    "network operations": "NetOps",
     "new brunswick": "nb",
     "nova scotia": "ns",
     "number": "num",
