@@ -9,3 +9,5 @@ tag(): user.git
 tag(): user.kubectl
 tag(): user.tabs
 tag(): user.readline
+
+terminal password: key(cmd-alt-f)
