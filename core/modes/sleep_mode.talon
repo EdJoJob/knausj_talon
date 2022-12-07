@@ -7,6 +7,7 @@ settings():
     user.mouse_enable_pop_click = 0
     # Stop mouse scroll down using hiss noise
     user.mouse_enable_hiss_scroll = 0
+    speech.record_all = 0
 
 #================================================================================
 # Commands to wake Talon
