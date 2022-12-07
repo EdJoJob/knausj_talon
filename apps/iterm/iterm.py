@@ -15,6 +15,29 @@ directories_to_remap = {}
 directories_to_exclude = {}
 
 
+@ctx.action_class("edit")
+class EditActions:
+    def line_start():
+        actions.key("home")
+
+    def line_end():
+        actions.key("end")
+
+
+@ctx.action_class("win")
+class win_actions:
+    def filename():
+        title = actions.win.title()
+        result = ""
+        if "VIM" in title:
+            result = title.split()[-1]
+
+        if "." in result:
+            return result
+
+        return ""
+
+
 @ctx.action_class("user")
 class UserActions:
     def tab_jump(number: int):
