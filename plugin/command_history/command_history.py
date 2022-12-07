@@ -21,7 +21,11 @@ def on_phrase(j):
 
     text = actions.user.history_transform_phrase_text(words)
 
-    if text is not None:
+    if (
+        text is not None
+        and text != ""
+        and (actions.speech.enabled() or text == "wake up")
+    ):
         history.append(text)
         history = history[-setting_command_history_size.get() :]
 
