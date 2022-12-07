@@ -24,6 +24,20 @@ class EditActions:
         actions.key("end")
 
 
+@ctx.action_class("win")
+class win_actions:
+    def filename():
+        title = actions.win.title()
+        result = ""
+        if "VIM" in title:
+            result = title.split()[-1]
+
+        if "." in result:
+            return result
+
+        return ""
+
+
 @ctx.action_class("user")
 class UserActions:
     # def file_manager_current_path():
