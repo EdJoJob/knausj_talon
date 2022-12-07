@@ -65,7 +65,7 @@ trip click | trip lick:
     mouse_click()
     # close the mouse grid
     user.grid_close()
-left drag | drag | drag start:
+left drag | dragging | drag start:
     # close zoom if open
     tracking.zoom_cancel()
     user.mouse_drag(0)
