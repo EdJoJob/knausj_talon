@@ -71,18 +71,16 @@ class UserActions:
         )
 
     def split_window_right():
-        actions.user.split_window_horizontally()
-        actions.user.tmux_execute_command("swap-pane -U -s #P")
+        actions.key("ctrl-l")
 
     def split_window_left():
-        actions.user.split_window_horizontally()
+        actions.key("ctrl-h")
 
     def split_window_down():
-        actions.user.split_window_vertically()
-        actions.user.tmux_execute_command("swap-pane -U -s #P")
+        actions.key("ctrl-j")
 
     def split_window_up():
-        actions.user.split_window_vertically()
+        actions.key("ctrl-k")
 
     def split_flip():
         actions.user.tmux_execute_command("next-layout")
