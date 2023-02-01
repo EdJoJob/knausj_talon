@@ -186,19 +186,19 @@ class UserActions:
         actions.user.vscode_and_wait("workbench.action.focusRightGroup")
 
     def split_window_down():
-        actions.user.vscode("workbench.action.moveEditorToBelowGroup")
+        actions.user.vscode_and_wait("workbench.action.focusBelowGroup")
 
     def split_window_horizontally():
         actions.user.vscode("workbench.action.splitEditorOrthogonal")
 
     def split_window_left():
-        actions.user.vscode("workbench.action.moveEditorToLeftGroup")
+        actions.user.vscode_and_wait("workbench.action.focusLeftGroup")
 
     def split_window_right():
-        actions.user.vscode("workbench.action.moveEditorToRightGroup")
+        actions.user.vscode_and_wait("workbench.action.focusRightGroup")
 
     def split_window_up():
-        actions.user.vscode("workbench.action.moveEditorToAboveGroup")
+        actions.user.vscode_and_wait("workbench.action.focusAboveGroup")
 
     def split_window_vertically():
         actions.user.vscode("workbench.action.splitEditor")
