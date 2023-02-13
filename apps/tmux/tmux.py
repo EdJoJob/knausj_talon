@@ -3,8 +3,17 @@ from talon import Context, Module, actions
 ctx = Context()
 mod = Module()
 
+apps = mod.apps
+
+apps.tmux = "app.name: tmux"
+
+mod.apps.tmux = """
+tag: terminal
+and win.title: /tmux/
+"""
+
 ctx.matches = r"""
-tag: user.tmux
+app: tmux
 """
 
 setting_tmux_prefix_key = mod.setting(

@@ -1,4 +1,4 @@
-tag: user.tmux
+app: tmux
 -
 settings():
     user.tmux_prefix_key = "`"
