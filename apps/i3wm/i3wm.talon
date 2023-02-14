@@ -2,7 +2,7 @@
 os: linux
 tag: user.i3wm
 -
-port <number_small>: user.i3wm_switch_to_workspace(number_small)
+port <number_small>: user.i3wm_switch_to_workspace(number_small, False)
 (port flip | flipper): user.i3wm_switch_to_workspace("back_and_forth")
 port right: user.i3wm_switch_to_workspace("next")
 port left: user.i3wm_switch_to_workspace("prev")
@@ -60,7 +60,7 @@ vertical (shell | terminal):
 # XXX - just replace with shuffle eventually?
 # XXX - like also need to match the generic talon commands
 (shuffle | move (win | window) [to] port) <number_small>:
-    user.i3wm_move_to_workspace(number_small)
+    user.i3wm_move_to_workspace(number_small, auto_back_and_forth=False)
 (shuffle | move (win | window) [to] last port):
     user.i3wm_move_to_workspace("back_and_forth")
 (shuffle | move) flipper: user.i3wm_move_to_workspace("back_and_forth")

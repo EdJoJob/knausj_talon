@@ -78,12 +78,33 @@ class Actions:
         """Move focus"""
         subprocess.check_call(("i3-msg", "focus", what))
 
-    def i3wm_switch_to_workspace(which: Union[str, int]):
+    def i3wm_switch_to_workspace(
+        which: Union[str, int], auto_back_and_forth: bool = True
+    ):
         """Focus the specified workspace"""
         if isinstance(which, int):
-            subprocess.check_call(("i3-msg", "workspace", "number", str(which)))
+            subprocess.check_call(
+                (
+                    "i3-msg",
+                    "workspace",
+                    "number",
+                    "--auto-back-and-forth"
+                    if auto_back_and_forth
+                    else "--no-auto-back-and-forth",
+                    str(which),
+                )
+            )
         else:
-            subprocess.check_call(("i3-msg", "workspace", which))
+            subprocess.check_call(
+                (
+                    "i3-msg",
+                    "workspace",
+                    "--auto-back-and-forth"
+                    if auto_back_and_forth
+                    else "--no-auto-back-and-forth",
+                    which,
+                )
+            )
 
     def i3wm_show_scratchpad():
         """Focus/cycle/hide the scratchpad"""
@@ -93,15 +114,38 @@ class Actions:
         """Move the focused container"""
         subprocess.check_call(("i3-msg", "move", to))
 
-    def i3wm_move_to_workspace(which: Union[str, int]):
+    def i3wm_move_to_workspace(
+        which: Union[str, int], auto_back_and_forth: bool = True
+    ):
         """Move the focused container to the specified workspace"""
         if isinstance(which, int):
             subprocess.check_call(
-                ("i3-msg", "move", "container", "to", "workspace", "number", str(which))
+                (
+                    "i3-msg",
+                    "move",
+                    "container",
+                    "to",
+                    "workspace",
+                    "number",
+                    "--auto-back-and-forth"
+                    if auto_back_and_forth
+                    else "--no-auto-back-and-forth",
+                    str(which),
+                )
             )
         else:
             subprocess.check_call(
-                ("i3-msg", "move", "container", "to", "workspace", which)
+                (
+                    "i3-msg",
+                    "move",
+                    "container",
+                    "to",
+                    "workspace",
+                    "--auto-back-and-forth"
+                    if auto_back_and_forth
+                    else "--no-auto-back-and-forth",
+                    which,
+                )
             )
 
     def i3wm_move_to_output(which: str):
