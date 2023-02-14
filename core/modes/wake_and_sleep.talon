@@ -4,4 +4,10 @@ mode: all
 ^drowse [<phrase>]$:
     user.code_clear_language_mode()
     speech.disable()
-^talon wake$: speech.enable()
+^talon wake$:
+    speech.enable()
+    mode.enable("noise")
+^let the meeting begin$:
+    user.code_clear_language_mode()
+    mode.disable("noise")
+    speech.disable()
