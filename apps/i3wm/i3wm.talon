@@ -55,15 +55,16 @@ vertical (shell | terminal):
 
 # XXX - just replace with shuffle eventually?
 # XXX - like also need to match the generic talon commands
-(shuffle | move (win | window) [to] port) <number_small>:
-    user.i3wm_move_to_workspace(number_small, auto_back_and_forth=False)
-(shuffle | move (win | window) [to] last port):
+(shuffle | move) (win | window) [to] port <number_small>:
+    user.i3wm_move_to_workspace(number_small, False)
+(shuffle | move (win | window)) [to] last [port]:
     user.i3wm_move_to_workspace("back_and_forth")
-(shuffle | move) flipper: user.i3wm_move_to_workspace("back_and_forth")
-(shuffle | move (win | window) left): user.i3wm_move("left")
-(shuffle | move (win | window) right): user.i3wm_move("right")
-(shuffle | move (win | window) up): user.i3wm_move("up")
-(shuffle | move (win | window) down): user.i3wm_move("down")
+(shuffle | move) flipper:
+    user.i3wm_move_to_workspace("back_and_forth")
+(shuffle | move (win | window)) left: user.i3wm_move("left")
+(shuffle | move (win | window)) right: user.i3wm_move("right")
+(shuffle | move (win | window)) up: user.i3wm_move("up")
+(shuffle | move (win | window)) down: user.i3wm_move("down")
 
 (win | window) horizontal: user.i3msg("split h")
 (win | window) vertical: user.i3msg("split v")
