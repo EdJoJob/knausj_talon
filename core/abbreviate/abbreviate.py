@@ -389,6 +389,7 @@ abbreviations = {
     "string": "str",
     "structure": "struct",
     "structures": "structs",
+    "super do": "sudo ",
     "symbol": "sym",
     "symbolic link": "symlink",
     "symbols": "syms",
