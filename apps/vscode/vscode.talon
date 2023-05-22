@@ -24,6 +24,7 @@ bar search: user.vscode("workbench.view.search")
 bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
+other bar switch: user.vscode("workbench.action.toggleAuxiliaryBar")
 
 # Symbol search
 symbol hunt [<user.text>]:
@@ -42,6 +43,7 @@ panel output: user.vscode("workbench.panel.output.focus")
 panel problems: user.vscode("workbench.panel.markers.view.focus")
 panel switch: user.vscode("workbench.action.togglePanel")
 panel terminal: user.vscode("workbench.action.terminal.focus")
+panel zoom: user.vscode("workbench.action.toggleMaximizedPanel")
 focus editor: user.vscode("workbench.action.focusActiveEditorGroup")
 
 # Settings
@@ -119,7 +121,9 @@ refactor this: user.vscode("editor.action.refactor")
 #code navigation
 (go declaration | follow): user.vscode("editor.action.revealDefinition")
 go back: user.vscode("workbench.action.navigateBack")
+history back: user.vscode("workbench.action.navigateBack")
 go forward: user.vscode("workbench.action.navigateForward")
+history forward: user.vscode("workbench.action.navigateForward")
 go implementation: user.vscode("editor.action.goToImplementation")
 go type: user.vscode("editor.action.goToTypeDefinition")
 go usage: user.vscode("references-view.find")
