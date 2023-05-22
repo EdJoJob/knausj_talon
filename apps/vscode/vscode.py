@@ -156,8 +156,11 @@ class EditActions:
     def indent_less():
         actions.user.vscode("editor.action.outdentLines")
 
+    def save():
+        actions.user.vscode("workbench.action.files.save")
+
     def save_all():
-        actions.user.vscode("workbench.action.files.saveAll")
+        actions.user.vscode("workbench.action.files.saveFiles")
 
     def save():
         actions.user.vscode("workbench.action.files.save")

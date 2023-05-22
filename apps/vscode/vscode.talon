@@ -26,6 +26,7 @@ bar search: user.vscode("workbench.view.search")
 bar source: user.vscode("workbench.view.scm")
 bar test: user.vscode("workbench.view.testing.focus")
 bar switch: user.vscode("workbench.action.toggleSidebarVisibility")
+other bar switch: user.vscode("workbench.action.toggleAuxiliaryBar")
 
 # Symbol search
 symbol hunt [<user.text>]:
@@ -44,6 +45,7 @@ panel output: user.vscode("workbench.panel.output.focus")
 panel problems: user.vscode("workbench.panel.markers.view.focus")
 panel switch: user.vscode("workbench.action.togglePanel")
 panel terminal: user.vscode("workbench.action.terminal.focus")
+panel zoom: user.vscode("workbench.action.toggleMaximizedPanel")
 focus editor: user.vscode("workbench.action.focusActiveEditorGroup")
 
 # Settings
@@ -205,6 +207,7 @@ change next: key(alt-f5)
 change last: key(shift-alt-f5)
 
 # Testing
+test refresh: user.vscode("testing.refreshTests")
 test run: user.vscode("testing.runAtCursor")
 test run file: user.vscode("testing.runCurrentFile")
 test run all: user.vscode("testing.runAll")
@@ -222,7 +225,9 @@ test cancel: user.vscode("testing.cancelRun")
 # Debugging
 break point: user.vscode("editor.debug.action.toggleBreakpoint")
 step over: user.vscode("workbench.action.debug.stepOver")
+step in:user.vscode("workbench.action.debug.stepInto")
 debug step into: user.vscode("workbench.action.debug.stepInto")
+step out: user.vscode("workbench.action.debug.stepOut")
 debug step out [of]: user.vscode("workbench.action.debug.stepOut")
 debug start: user.vscode("workbench.action.debug.start")
 debug pause: user.vscode("workbench.action.debug.pause")
@@ -233,17 +238,17 @@ debug console: user.vscode("workbench.debug.action.toggleRepl")
 debug clean: user.vscode("workbench.debug.panel.action.clearReplAction")
 
 # Terminal
-terminal external: user.vscode("workbench.action.terminal.openNativeConsole")
-terminal new: user.vscode("workbench.action.terminal.new")
-terminal next: user.vscode("workbench.action.terminal.focusNext")
-terminal last: user.vscode("workbench.action.terminal.focusPrevious")
-terminal split: user.vscode("workbench.action.terminal.split")
-terminal zoom: user.vscode("workbench.action.toggleMaximizedPanel")
-terminal trash: user.vscode("workbench.action.terminal.kill")
-terminal toggle: user.vscode_and_wait("workbench.action.terminal.toggleTerminal")
-terminal scroll up: user.vscode("workbench.action.terminal.scrollUp")
-terminal scroll down: user.vscode("workbench.action.terminal.scrollDown")
-terminal <number_small>: user.vscode_terminal(number_small)
+term external: user.vscode("workbench.action.terminal.openNativeConsole")
+term new: user.vscode("workbench.action.terminal.new")
+term next: user.vscode("workbench.action.terminal.focusNext")
+term last: user.vscode("workbench.action.terminal.focusPrevious")
+term split: user.vscode("workbench.action.terminal.split")
+term zoom: user.vscode("workbench.action.toggleMaximizedPanel")
+term trash: user.vscode("workbench.action.terminal.kill")
+term dog: user.vscode_and_wait("workbench.action.terminal.toggleTerminal")
+term scroll up: user.vscode("workbench.action.terminal.scrollUp")
+term scroll down: user.vscode("workbench.action.terminal.scrollDown")
+term <number_small>: user.vscode_terminal(number_small)
 
 task run [<user.text>]:
     user.vscode("workbench.action.tasks.runTask")
