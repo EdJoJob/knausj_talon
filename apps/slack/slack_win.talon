@@ -45,8 +45,8 @@ bold: key(ctrl-b)
 # Miscellaneous
 (slack | lack) shortcuts: key(ctrl-/)
 emote <user.text>: "{text}"
-toggle left sidebar: key(ctrl-shift-d)
-toggle right sidebar: key(ctrl-.)
+bar switch: key(ctrl-shift-d)
+other bar switch: key(ctrl-.)
 
 # DEPRECATED
 (move | next) focus:
