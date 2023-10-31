@@ -15,6 +15,18 @@ ctx = Context()
 ctx.matches = r"""
 code.language: python
 """
+ctx.lists["user.code_common_function"] = {
+    "enumerate": "enumerate",
+    "int": "int",
+    "length": "len",
+    "list": "list",
+    "print": "print",
+    "range": "range",
+    "set": "set",
+    "split": "split",
+    "string": "str",
+    "update": "update",
+}
 
 """a set of fields used in python docstrings that will follow the
 reStructuredText format"""
@@ -38,7 +50,7 @@ ctx.lists["user.python_docstring_fields"] = docstring_fields
 
 ctx.lists["user.code_type"] = {
     "boolean": "bool",
-    "integer": "int",
+    "int": "int",
     "string": "str",
     "none": "None",
     "dick": "dict",
