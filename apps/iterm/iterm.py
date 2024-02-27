@@ -49,3 +49,24 @@ class UserActions:
     def terminal_clear_screen():
         """Clear screen"""
         actions.key("ctrl-l")
+
+    def split_maximize():
+        actions.key("cmd-shift-enter")
+
+    def split_window_horizontally():
+        actions.key("cmd-shift-d")
+
+    def split_window_vertically():
+        actions.key("cmd-d")
+
+    def split_window_up():
+        actions.key("cmd-alt-up")
+
+    def split_window_down():
+        actions.key("cmd-alt-down")
+
+    def split_window_left():
+        actions.key("cmd-alt-left")
+
+    def split_window_right():
+        actions.key("cmd-alt-right")
