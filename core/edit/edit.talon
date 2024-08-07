@@ -66,8 +66,8 @@ new line above: edit.line_insert_up()
 new line below: edit.line_insert_down()
 
 # Undo/redo
-undo that: edit.undo()
-redo that: edit.redo()
+(blast|undo that): edit.undo()
+(yes indeed|redo that): edit.redo()
 
 # Save
 disk: edit.save()
